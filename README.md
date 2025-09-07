@@ -7,5 +7,5 @@ Clasificador de residuos en dos niveles:
 ## 🚀 How to use / Cómo usarlo
 1. Clone this repository / Clonar este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/Waste-classificator.git
+   git clone https://github.com/IRoma88/Waste-classificator.git
    cd Waste-classificator
