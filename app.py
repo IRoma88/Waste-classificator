@@ -5,6 +5,9 @@ from utils import load_models, preprocess_image
 # 1️⃣ Cargar modelos
 model_A, model_B = load_models()
 
+st.write("Model A input shape:", model_A.input_shape)
+st.write("Model B input shape:", model_B.input_shape)
+
 # 2️⃣ Clases
 class_names_A = ["Blue reciclable", "Brown Compost", "Gray Thrash", "SPECIAL"]
 class_names_B = ["Donation", "Drop Off (recogida municipal)", 
