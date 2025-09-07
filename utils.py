@@ -4,12 +4,10 @@ from PIL import Image
 import zipfile
 import os
 
-def load_models(zip_path="modelos_cascada.zip"):
-    # Descomprimir si no existe carpeta
-    if not os.path.exists("modelos"):
-        os.makedirs("modelos", exist_ok=True)
-        with zipfile.ZipFile(zip_path, "r") as zf:
-            zf.extractall("modelos")
+def load_models():
+    model_A = tf.keras.models.load_model("modelo_A.h5")
+    model_B = tf.keras.models.load_model("modelo_B_finetuned.h5")
+    return model_A, model_B
 
     model_A = tf.keras.models.load_model("modelos/modelo_A.h5")
     model_B = tf.keras.models.load_model("modelos/modelo_B_finetuned.h5")
