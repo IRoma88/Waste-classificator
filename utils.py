@@ -5,12 +5,12 @@ import zipfile
 import os
 
 def load_models():
-    model_A = tf.keras.models.load_model("modelo_A.h5")
-    model_B = tf.keras.models.load_model("modelo_B_finetuned.h5")
+    model_A = tf.keras.models.load_model("modelo_A")
+    model_B = tf.keras.models.load_model("modelo_B_finetuned")
     return model_A, model_B
 
-    model_A = tf.keras.models.load_model("modelos/modelo_A.h5")
-    model_B = tf.keras.models.load_model("modelos/modelo_B_finetuned.h5")
+    model_A = tf.keras.models.load_model("modelos/modelo_A")
+    model_B = tf.keras.models.load_model("modelos/modelo_B_finetuned")
 
     return model_A, model_B
 
