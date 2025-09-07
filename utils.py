@@ -5,13 +5,9 @@ import zipfile
 import os
 
 def load_models():
-    try:
-        model_A = tf.keras.models.load_model("modelo_A.h5")
-        model_B = tf.keras.models.load_model("modelo_B_finetuned.h5")
-        return model_A, model_B
-    except Exception as e:
-        print("Error loading models:", e)
-        raise
+    model_A = tf.keras.models.load_model("modelo_A.h5", compile=False)
+    model_B = tf.keras.models.load_model("modelo_B_finetuned.h5", compile=False)
+    return model_A, model_B
 
 
 def preprocess_image(uploaded_file, target_size=(224, 224)):
