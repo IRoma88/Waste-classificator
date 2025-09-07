@@ -7,11 +7,10 @@ from PIL import Image
 
 # --- Arquitectura usada en el entrenamiento ---
 def build_model(num_classes: int, input_size=(224, 224, 3)) -> tf.keras.Model:
-    # OJO: weights=None porque vamos a cargar NUESTROS pesos entrenados.
     base_model = MobileNetV2(
         input_shape=input_size,
         include_top=False,
-        weights=None
+        weights="imagenet"   # <- antes poníamos None
     )
     x = base_model.output
     x = layers.GlobalAveragePooling2D()(x)
