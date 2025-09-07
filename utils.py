@@ -3,9 +3,8 @@ import numpy as np
 from PIL import Image
 
 def load_models():
-    """Carga los modelos y devuelve model_A y model_B"""
-    model_A = tf.keras.models.load_model("modelo_A.h5", compile=False)
-    model_B = tf.keras.models.load_model("modelo_B_finetuned.h5", compile=False)
+    model_A = tf.keras.models.load_model("modelo_A.keras")
+    model_B = tf.keras.models.load_model("modelo_B.keras")
     return model_A, model_B
 
 def preprocess_image(uploaded_file, target_size):
